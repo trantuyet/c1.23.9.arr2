@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Replace</title>
+</head>
+<body>
+<script>
+    let length = + prompt('Nhập số phần tử của mảng ');
+    let arr = [];
+    for (let i = 0; i < length; i++) {
+        arr[i] = prompt('Nhập phần tử thứ '+ i+ ' của mảng');
+    }
+    arr= arr.join('');
+    let str = arr.toString();
+    let strNew = '';
+    for (let j = 0; j < str.length; j++) {
+        if (str[j] === '-') {
+            strNew+= '_';
+        }
+        else {strNew += str[j] }
+    }
+    alert('Sau khi thay thế ta được: '+ strNew);
+</script>
+</body>
+</html>

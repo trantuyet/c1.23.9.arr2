@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Count Words of a String</title>
+</head>
+<body>
+    <button onclick="countWord()">Count</button>
+    <p id="result"></p>
+    <script>
+        let str = '';
+        str = prompt('Nhập chuỗi ', 'a b c');
+        function countWord() {
+            let count = 0;
+            if (str[0] != " ") {
+                count =1;
+            }
+            for (let i = 0; i < str.length-1; i++) {
+                if ((str[i] === " ") && (str[i+1] !== " ") ) {
+                    count ++;
+                }
+            }
+            document.getElementById('result').innerHTML = ('Có '+count+' từ');
+        }
+    </script>
+</body>
+</html>

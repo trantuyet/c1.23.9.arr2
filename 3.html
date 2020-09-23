@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số kí tự số trong mảng</title>
+</head>
+<body>
+<script>
+    function check(k) {
+        let flag = false;
+        let b = '0123456789';
+        for (let i = 0; i < b.length; i++) {
+            if (k == b[i]) {
+                flag = true;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    let a = [1, 2, 24, '10', 'abc1,', 'abc'];
+    a = a.toString();
+    document.write("Ta có mảng như sau: " + a + '<br>');
+    let count = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (check(a[i])) {
+            count += 1;
+        }
+    }
+    document.write('Có '+count + ' kí tự là số trong mảng');
+</script>
+</body>
+</html>
